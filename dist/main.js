@@ -1,6 +1,33 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/bundle.js":
+/*!***********************!*\
+  !*** ./src/bundle.js ***!
+  \***********************/
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+var answer = 42;
+
+var printAnswer = function printAnswer() {
+  // 打印
+  console.log("the answer is ".concat(answer));
+};
+
+var index = {
+  printAnswer: printAnswer
+};
+exports["default"] = index;
+exports.printAnswer = printAnswer;
+
+/***/ }),
+
 /***/ "./src/cjs.mod.js":
 /*!************************!*\
   !*** ./src/cjs.mod.js ***!
@@ -122,15 +149,22 @@ var __webpack_exports__ = {};
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 /* harmony import */ var _cjs_mod__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./cjs.mod */ "./src/cjs.mod.js");
 /* harmony import */ var _cjs_mod__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_cjs_mod__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _esm_mod__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./esm.mod */ "./src/esm.mod.js");
+/* harmony import */ var _bundle__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./bundle */ "./src/bundle.js");
 
 
-console.log(_cjs_mod__WEBPACK_IMPORTED_MODULE_0__.foo);
-console.log(_cjs_mod__WEBPACK_IMPORTED_MODULE_0__.bar);
-console.log(_esm_mod__WEBPACK_IMPORTED_MODULE_1__["default"]);
-console.log(_esm_mod__WEBPACK_IMPORTED_MODULE_1__.bar1);
+
+console.log((_cjs_mod__WEBPACK_IMPORTED_MODULE_0___default()));
+console.log((_cjs_mod__WEBPACK_IMPORTED_MODULE_0___default().bar));
+console.log(_esm_mod__WEBPACK_IMPORTED_MODULE_1__["default"]); // console.log(bar1);
+
+console.log(_bundle__WEBPACK_IMPORTED_MODULE_2__["default"].printAnswer(111));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_esm_mod__WEBPACK_IMPORTED_MODULE_1__["default"]);
 })();
 
 /******/ })()
